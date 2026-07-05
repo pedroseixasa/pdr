@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { useState } from "react";
 import {
@@ -19,27 +18,6 @@ import {
 } from "lucide-react";
 import proofImage from "@/assets/proof.jpeg";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "PDR 2026 — Enter Early, Exit Early, Profit Always" },
-      {
-        name: "description",
-        content:
-          "A simple, repeatable strategy to profit from prediction markets — without relying on luck or waiting for the final result.",
-      },
-      { property: "og:title", content: "PDR 2026 — Enter Early, Exit Early, Profit Always" },
-      {
-        property: "og:description",
-        content: "A simple, repeatable strategy to profit from prediction markets.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
-  component: Landing,
-});
-
 const SOLANA_ADDRESS = "DiLyUUMVXQmG4LJUnJvnPKutrLDWQC93Hp777AUET8yB";
 const PRICE_USD = 11.99;
 
@@ -58,14 +36,14 @@ function Section({ children, className = "" }: { children: React.ReactNode; clas
   );
 }
 
-function Landing() {
+export default function Landing() {
   const STRIPE_LINK = "https://buy.stripe.com/5kQ9AV0h404Z2u1eRifQI00";
   const openCheckout = () => {
     window.open(STRIPE_LINK, "_blank");
   };
 
   return (
-    <div className="min-h-screen text-fo  reground">
+    <div className="min-h-screen text-foreground">
       {/* Nav */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border">
         <div className="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
