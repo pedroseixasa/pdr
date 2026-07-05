@@ -50,13 +50,7 @@ const fadeUp = {
   transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
 };
 
-function Section({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+function Section({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <section className={`px-6 md:px-10 py-24 md:py-32 max-w-6xl mx-auto ${className}`}>
       {children}
@@ -65,11 +59,13 @@ function Section({
 }
 
 function Landing() {
-  const [checkoutOpen, setCheckoutOpen] = useState(false);
-  const openCheckout = () => setCheckoutOpen(true);
+  const STRIPE_LINK = "https://buy.stripe.com/5kQ9AV0h404Z2u1eRifQI00";
+  const openCheckout = () => {
+    window.open(STRIPE_LINK, "_blank");
+  };
 
   return (
-    <div className="min-h-screen text-foreground">
+    <div className="min-h-screen text-fo  reground">
       {/* Nav */}
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/60 border-b border-border">
         <div className="max-w-6xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
@@ -157,8 +153,8 @@ function Landing() {
           </div>
           <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
             <p>
-              There are platforms where you buy and sell "shares" on real-world events, just like
-              on a stock exchange. You can exit whenever you want — no need to wait for the final
+              There are platforms where you buy and sell "shares" on real-world events, just like on
+              a stock exchange. You can exit whenever you want — no need to wait for the final
               result to lock in profit or cut losses.
             </p>
             <p>
@@ -175,15 +171,12 @@ function Landing() {
       {/* Problem */}
       <Section>
         <div className="grid md:grid-cols-2 gap-8">
-          <motion.div
-            {...fadeUp}
-            className="rounded-2xl border border-border bg-card p-8 md:p-10"
-          >
+          <motion.div {...fadeUp} className="rounded-2xl border border-border bg-card p-8 md:p-10">
             <div className="text-destructive text-sm font-semibold mb-3">Most people</div>
             <h3 className="text-2xl font-bold mb-4">Enter late. Buy high. Hope.</h3>
             <p className="text-muted-foreground leading-relaxed">
-              They jump in after the hype explodes, pay the highest price, and stay at the mercy
-              of the final result — risking everything until the very last minute.
+              They jump in after the hype explodes, pay the highest price, and stay at the mercy of
+              the final result — risking everything until the very last minute.
             </p>
           </motion.div>
           <motion.div
@@ -235,10 +228,7 @@ function Landing() {
           ))}
         </div>
 
-        <motion.p
-          {...fadeUp}
-          className="text-center text-muted-foreground mt-12 max-w-2xl mx-auto"
-        >
+        <motion.p {...fadeUp} className="text-center text-muted-foreground mt-12 max-w-2xl mx-auto">
           Every result comes from a repeatable tactic, week after week. The full step-by-step is
           inside the guide.
         </motion.p>
@@ -260,8 +250,8 @@ function Landing() {
                 $11.99 pays for itself on your first trade.
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Put the knowledge to work: invest $200, capture a 30% move, and you walk away with
-                a <span className="text-primary font-semibold">$60 profit</span> — the guide has
+                Put the knowledge to work: invest $200, capture a 30% move, and you walk away with a{" "}
+                <span className="text-primary font-semibold">$60 profit</span> — the guide has
                 already paid for itself{" "}
                 <span className="text-foreground font-semibold">5 times over</span>.
               </p>
@@ -387,9 +377,9 @@ function Landing() {
               </div>
               <div className="flex flex-col justify-center md:border-l md:border-border md:pl-10">
                 <div className="flex items-center gap-3">
-                  <span className="text-sm text-muted-foreground line-through">$17.13</span>
+                  <span className="text-sm text-muted-foreground line-through">$19.99</span>
                   <span className="text-xs font-semibold text-primary bg-primary/10 border border-primary/30 rounded-full px-2 py-0.5">
-                    -30%
+                    -40%
                   </span>
                 </div>
                 <div className="font-display text-6xl font-bold text-primary text-glow mt-1">
@@ -405,7 +395,7 @@ function Landing() {
                   Buy now <ArrowRight className="w-4 h-4" />
                 </button>
                 <div className="text-xs text-muted-foreground mt-3 text-center">
-                  Card &amp; Solana · instant delivery
+                  Card · instant delivery
                 </div>
               </div>
             </div>
@@ -434,7 +424,7 @@ function Landing() {
             },
             {
               q: "How do I pay?",
-              a: "Card or Solana (SOL). Both are handled at checkout. You get the PDF immediately after payment.",
+              a: "Card, via secure Stripe checkout. You get the PDF immediately after payment.",
             },
             {
               q: "What do I get after buying?",
@@ -491,8 +481,6 @@ function Landing() {
           </p>
         </div>
       </footer>
-
-      {checkoutOpen && <CheckoutModal onClose={() => setCheckoutOpen(false)} />}
     </div>
   );
 }
@@ -526,11 +514,7 @@ function CheckoutModal({ onClose }: { onClose: () => void }) {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center p-0 sm:p-6 bg-black/70 backdrop-blur-sm">
-      <div
-        className="absolute inset-0"
-        onClick={onClose}
-        aria-hidden
-      />
+      <div className="absolute inset-0" onClick={onClose} aria-hidden />
       <div className="relative w-full max-w-lg rounded-t-3xl sm:rounded-3xl border border-border bg-card shadow-card overflow-hidden max-h-[90vh] flex flex-col">
         <div className="flex items-center justify-between px-6 py-4 border-b border-border">
           <div className="flex items-center gap-3">
@@ -539,9 +523,7 @@ function CheckoutModal({ onClose }: { onClose: () => void }) {
             </div>
             <div>
               <div className="font-display font-bold text-sm">PDR 2026 Guide</div>
-              <div className="text-xs text-muted-foreground">
-                ${PRICE_USD} · instant delivery
-              </div>
+              <div className="text-xs text-muted-foreground">${PRICE_USD} · instant delivery</div>
             </div>
           </div>
           <button
@@ -590,8 +572,8 @@ function CheckoutModal({ onClose }: { onClose: () => void }) {
                       Send exactly ${PRICE_USD} in SOL
                     </div>
                     <p className="text-xs text-muted-foreground">
-                      Use any Solana wallet (Phantom, Solflare, exchange withdrawal). Convert
-                      ${PRICE_USD} USD to SOL at current rate.
+                      Use any Solana wallet (Phantom, Solflare, exchange withdrawal). Convert $
+                      {PRICE_USD} USD to SOL at current rate.
                     </p>
                   </div>
 
@@ -669,9 +651,9 @@ function CheckoutModal({ onClose }: { onClose: () => void }) {
                     <CreditCard className="w-6 h-6 text-primary mb-3" />
                     <div className="font-semibold mb-1">Card checkout</div>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Card payments (Visa, Mastercard, Apple Pay, Google Pay) are being enabled.
-                      For instant access right now, use Solana — it takes under a minute with any
-                      wallet or exchange.
+                      Card payments (Visa, Mastercard, Apple Pay, Google Pay) are being enabled. For
+                      instant access right now, use Solana — it takes under a minute with any wallet
+                      or exchange.
                     </p>
                   </div>
                   <button
