@@ -106,7 +106,7 @@ export default function Landing() {
               <span className="w-2.5 h-2.5 rounded-full bg-warning/70" />
               <span className="w-2.5 h-2.5 rounded-full bg-primary/70" />
               <span className="ml-3 text-xs text-muted-foreground">
-                Closed positions - every one in profit
+                Closed positions - every one in profit [BUY TO SEE]
               </span>
             </div>
             <img
@@ -228,9 +228,9 @@ export default function Landing() {
                 $11.99 pays for itself on your first trade.
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Put the knowledge to work: invest $200, capture a 30% move, and you walk away with a{" "}
-                <span className="text-primary font-semibold">$60 profit</span> - the guide has
-                already paid for itself{" "}
+                Put the knowledge to work: For example, invest $200, capture a 30% move, and you
+                walk away with a <span className="text-primary font-semibold">$60 profit</span> -
+                the guide has already paid for itself{" "}
                 <span className="text-foreground font-semibold">5 times over</span>.
               </p>
             </div>
