@@ -77,18 +77,38 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "PDR 2026 — Enter Early, Exit Early, Profit Always" },
-      { name: "description", content: "A simple, repeatable strategy to profit from prediction markets,without relying on luck or waiting for the final result." },
+      { title: "PDR 2026 - Enter Early, Exit Early, Profit Always" },
+      {
+        name: "description",
+        content:
+          "A simple, repeatable strategy to profit from prediction markets,without relying on luck or waiting for the final result.",
+      },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "PDR 2026 — Enter Early, Exit Early, Profit Always" },
-      { property: "og:description", content: "A simple, repeatable strategy to profit from prediction markets,without relying on luck or waiting for the final result." },
+      { property: "og:title", content: "PDR 2026 - Enter Early, Exit Early, Profit Always" },
+      {
+        property: "og:description",
+        content:
+          "A simple, repeatable strategy to profit from prediction markets,without relying on luck or waiting for the final result.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "PDR 2026 — Enter Early, Exit Early, Profit Always" },
-      { name: "twitter:description", content: "A simple, repeatable strategy to profit from prediction markets,without relying on luck or waiting for the final result." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/e87de9b2-5e03-41d4-8b88-fda7d85a1abc" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/e87de9b2-5e03-41d4-8b88-fda7d85a1abc" },
+      { name: "twitter:title", content: "PDR 2026 - Enter Early, Exit Early, Profit Always" },
+      {
+        name: "twitter:description",
+        content:
+          "A simple, repeatable strategy to profit from prediction markets,without relying on luck or waiting for the final result.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/e87de9b2-5e03-41d4-8b88-fda7d85a1abc",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/e87de9b2-5e03-41d4-8b88-fda7d85a1abc",
+      },
     ],
     links: [
       {

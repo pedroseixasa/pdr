@@ -71,7 +71,7 @@ export default function Landing() {
             <span className="text-primary text-glow">Profit always.</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl">
-            A simple, repeatable strategy to profit from prediction markets — without relying on
+            A simple, repeatable strategy to profit from prediction markets - without relying on
             luck and without waiting for the final result.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-4">
@@ -106,7 +106,7 @@ export default function Landing() {
               <span className="w-2.5 h-2.5 rounded-full bg-warning/70" />
               <span className="w-2.5 h-2.5 rounded-full bg-primary/70" />
               <span className="ml-3 text-xs text-muted-foreground">
-                Closed positions — every one in profit
+                Closed positions - every one in profit
               </span>
             </div>
             <img
@@ -126,13 +126,13 @@ export default function Landing() {
               The concept
             </div>
             <h2 className="text-4xl md:text-5xl font-bold">
-              Like a stock market — but for real-world events.
+              Like a stock market - but for real-world events.
             </h2>
           </div>
           <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
             <p>
               There are platforms where you buy and sell "shares" on real-world events, just like on
-              a stock exchange. You can exit whenever you want — no need to wait for the final
+              a stock exchange. You can exit whenever you want - no need to wait for the final
               result to lock in profit or cut losses.
             </p>
             <p>
@@ -154,7 +154,7 @@ export default function Landing() {
             <h3 className="text-2xl font-bold mb-4">Enter late. Buy high. Hope.</h3>
             <p className="text-muted-foreground leading-relaxed">
               They jump in after the hype explodes, pay the highest price, and stay at the mercy of
-              the final result — risking everything until the very last minute.
+              the final result - risking everything until the very last minute.
             </p>
           </motion.div>
           <motion.div
@@ -229,7 +229,7 @@ export default function Landing() {
               </h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Put the knowledge to work: invest $200, capture a 30% move, and you walk away with a{" "}
-                <span className="text-primary font-semibold">$60 profit</span> — the guide has
+                <span className="text-primary font-semibold">$60 profit</span> - the guide has
                 already paid for itself{" "}
                 <span className="text-foreground font-semibold">5 times over</span>.
               </p>
@@ -292,14 +292,14 @@ export default function Landing() {
           <h2 className="text-4xl md:text-5xl font-bold">Liquidity and risks.</h2>
           <p className="text-muted-foreground mt-4 text-lg">
             The weekly markets in focus have enough volume to enter and exit without liquidity
-            issues. But risks exist — and it's only fair to talk about them.
+            issues. But risks exist - and it's only fair to talk about them.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-4">
           {[
             "Unpredictable behavior of the underlying event can flip positions quickly.",
-            "Selling too early reduces potential profit — discipline has a cost.",
+            "Selling too early reduces potential profit - discipline has a cost.",
             "The platform operates with cryptocurrency: basic knowledge of digital wallets is required.",
           ].map((risk, i) => (
             <motion.div
@@ -343,7 +343,7 @@ export default function Landing() {
                     "Sell-decision table: when to enter, when to exit",
                     "Real examples with screenshots and documented values",
                     "List of recommended tools and platforms",
-                    "Free updates included — no extra cost",
+                    "Free updates included - no extra cost",
                     "Instant access after payment",
                   ].map((f) => (
                     <li key={f} className="flex gap-3 text-sm text-muted-foreground">
@@ -630,7 +630,7 @@ function CheckoutModal({ onClose }: { onClose: () => void }) {
                     <div className="font-semibold mb-1">Card checkout</div>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       Card payments (Visa, Mastercard, Apple Pay, Google Pay) are being enabled. For
-                      instant access right now, use Solana — it takes under a minute with any wallet
+                      instant access right now, use Solana - it takes under a minute with any wallet
                       or exchange.
                     </p>
                   </div>
